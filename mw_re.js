@@ -17,11 +17,11 @@ const M = new Mastodon({
 const web = 'https://www.merriam-webster.com/word-of-the-day';
 
 toot();
-setInterval(toot, 24 * 60 * 60 * 1000);
+// setInterval(toot, 24 * 60 * 60 * 1000);
 
 function toot() {
   var params = {
-    spoiler_text: 'Word of today: ',
+    spoiler_text: 'Word of the day: ',
     status: '',
   }
 
