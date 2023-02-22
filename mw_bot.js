@@ -32,7 +32,7 @@ function toot() {
     });
     res.on('end', function() {
       var root = HTMLParser.parse(body);
-      params.spoiler_text += root.querySelectorAll("h1")[0].childNodes[0]._rawText;
+      params.spoiler_text += root.querySelectorAll("h2")[0].childNodes[0]._rawText;
       // console.log(params.spoiler_text);
       params.status += 'Class: ';
       params.status += root.querySelectorAll(".main-attr")[0].childNodes[0]._rawText + " | ";
@@ -67,6 +67,7 @@ function toot() {
         }
       });
 
+      // console.log(params.spoiler_text);
       // console.log(params.status);
 
     });
